@@ -4,8 +4,41 @@ title: Home
 ---
 
 {% include hero.html %}
+
+<section class="metrics">
+  <div class="container">
+    <div class="metrics-grid">
+      <div class="metric-item">
+        <span class="metric-value">M.Sc.</span>
+        <span class="metric-label">Comp. &amp; Telematics Eng.</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-value">3</span>
+        <span class="metric-label">publications</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-value">C</span>
+        <span class="metric-label">primary language</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-value">2.5</span>
+        <span class="metric-label">years of experience</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% include about.html %}
 {% include publications.html %}
-{% include skills.html %}
 {% include projects.html %}
-{% include hobbies.html %}
+{% include skills.html %}
+{% include code-golf.html %}
+
+<section id="currently" class="section">
+  <div class="container">
+    <h2 class="section-title"><span class="prompt">~ $</span> <span class="cmd">cat</span> /proc/self/status</h2>
+    <div class="currently-content">
+      <p>Currently exploring RISC-V extensibility, SIMD microbenchmarks, and Vitis HLS code generation for real-time edge inference.</p>
+    </div>
+  </div>
+</section>

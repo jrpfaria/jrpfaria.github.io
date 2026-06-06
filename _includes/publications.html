@@ -1,6 +1,6 @@
 <section id="publications" class="section section-alt">
   <div class="container">
-    <h2 class="section-title">Publications</h2>
+    <h2 class="section-title"><span class="prompt">~ $</span> <span class="cmd">ls</span> pubs/</h2>
     <div class="publications-list">
       {% for pub in site.data.publications %}
       <div class="pub-card">
@@ -8,7 +8,13 @@
           <span class="pub-type">{{ pub.type }}</span>
           <span class="pub-venue">{{ pub.venue }}, {{ pub.year }}</span>
         </div>
-        <h3 class="pub-title">{{ pub.title }}</h3>
+        <h3 class="pub-title">
+          {% if pub.url %}
+          <a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+          {% else %}
+          {{ pub.title }}
+          {% endif %}
+        </h3>
         <p class="pub-authors">{{ pub.authors }}</p>
         <p class="pub-desc">{{ pub.description }}</p>
       </div>

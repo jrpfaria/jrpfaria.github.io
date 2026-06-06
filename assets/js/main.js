@@ -27,32 +27,33 @@
   function updateActiveLink() {
     var scrollY = window.scrollY;
     var scrollBottom = scrollY + window.innerHeight;
-    var pageBottom = document.body.scrollHeight;
+    var pageBottom = document.documentElement.scrollHeight;
 
-    // Clear all
     navLinks.forEach(function (l) { l.style.color = ""; });
 
-    // Bottom of page → highlight last link
-    if (scrollBottom >= pageBottom - 2) {
+    // Bottom of page → last nav link
+    if (pageBottom - scrollBottom <= 2) {
       var last = navLinks[navLinks.length - 1];
       if (last) last.style.color = accent;
       return;
     }
 
-    // Normal: iterate in reverse, pick the first section whose top ≤ scrollY + offset
-    var offset = 100;
-    for (var i = sections.length - 1; i >= 0; i--) {
-      var section = sections[i];
-      var top = section.offsetTop;
-      if (scrollY + offset >= top) {
-        var id = section.getAttribute("id");
-        navLinks.forEach(function (link) {
-          if (link.getAttribute("href") === "#" + id) {
-            link.style.color = accent;
-          }
-        });
-        return;
+    // Walk forward: highlight the last section whose top has been scrolled past
+    var current = null;
+    var offset = 120;
+    for (var i = 0; i < sections.length; i++) {
+      if (scrollY + offset >= sections[i].offsetTop) {
+        current = sections[i];
       }
+    }
+
+    if (current) {
+      var id = current.getAttribute("id");
+      navLinks.forEach(function (link) {
+        if (link.getAttribute("href") === "#" + id) {
+          link.style.color = accent;
+        }
+      });
     }
   }
 

@@ -1,18 +1,26 @@
 <section id="hero" class="hero">
-  <div class="container">
-    <h1 class="hero-name">{{ site.title }}</h1>
-    <p class="hero-title">Firmware / Embedded Systems Engineer</p>
-    <p class="hero-tagline">C firmware &middot; FPGA acceleration &middot; Low-level systems</p>
-    <div class="hero-links">
-      <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener" class="btn btn-outline">
-        GitHub
-      </a>
-      <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener" class="btn btn-outline">
-        LinkedIn
-      </a>
-      <a href="mailto:{{ site.email }}" class="btn btn-primary">
-        Email
-      </a>
+  <div class="terminal-frame">
+    <div class="terminal-bar">
+      <span class="dot" style="background:#5f81a5"></span>
+      <span class="dot" style="background:#d0dfee"></span>
+      <span class="dot" style="background:#e8d0bc"></span>
+      <span class="terminal-title">jrpfaria@portfolio:~</span>
+    </div>
+    <div class="terminal-body">
+      <p class="line"><span class="prompt">~ $</span> <span class="cmd">whoami</span></p>
+      <h1 class="output-name">{{ site.title }}</h1>
+
+      <p class="line"><span class="prompt">~ $</span> <span class="cmd">cat</span> /etc/profile</p>
+      <p class="output-title">Firmware / Embedded Systems Engineer</p>
+      <p class="output-tagline">C firmware &middot; FPGA acceleration &middot; Low-level systems</p>
+
+      <p class="line"><span class="prompt">~ $</span> <span class="output-cursor"></span></p>
+      <div class="hero-links">
+        <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
+        <a href="{{ site.cv_url }}" class="btn btn-primary" download="jrfaria-cv.pdf">curl -O cv.pdf</a>
+        <a href="mailto:{{ site.email }}" class="btn btn-outline">Email</a>
+      </div>
     </div>
   </div>
 </section>

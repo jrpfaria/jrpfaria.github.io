@@ -22,7 +22,10 @@ defaults:
       layout: default
 
 sass:
-  style: compressed
+  style: expanded
+
+cv_url: /jrfaria-cv.pdf
+cache_version: 3
 
 plugins:
   - jekyll-sitemap

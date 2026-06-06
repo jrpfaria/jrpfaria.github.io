@@ -4,6 +4,7 @@
   year: 2025
   month: Oct
   type: "First-author IEEE conference"
+  url: "https://doi.org/10.1109/NorCAS66540.2025.11231201"
   description: "Compared Vitis HLS and HDL Coder across latency, resource usage, and development effort for CNN deployment on FPGAs at the edge."
 
 - title: "Using Automatic Code Generation to Streamline the Real-Time FPGA Deployment of DNNs at the Edge"
@@ -12,6 +13,7 @@
   year: 2025
   month: Nov
   type: "First-author IEEE conference"
+  url: "https://doi.org/10.1109/ICECS66544.2025.11270598"
   description: "Developed a code generation framework that translates GUI input into HLS-ready C files for DNN deployment on FPGAs, optimizing latency and resource utilization for real-time edge inference."
 
 - title: "Understanding Signal Feature Impact in CNN-Based Modulation Classification with Realistic Datasets"
@@ -19,4 +21,5 @@
   venue: "ICCSA Workshops (Springer LNCS)"
   year: 2025
   type: "Co-authored Springer paper"
+  url: "https://doi.org/10.1007/978-3-031-97576-9_8"
   description: "Analyzed the impact of signal features on CNN-based modulation classification using realistic datasets."

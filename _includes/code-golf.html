@@ -1,0 +1,33 @@
+<section id="code-golf" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title"><span class="prompt">~ $</span> <span class="cmd">strings</span> /usr/games/code-golf</h2>
+    <div class="code-golf-content">
+      <div class="terminal-frame">
+        <div class="terminal-bar">
+          <span class="dot" style="background:#5f81a5"></span>
+          <span class="dot" style="background:#d0dfee"></span>
+          <span class="dot" style="background:#e8d0bc"></span>
+          <span class="terminal-title">quine.c</span>
+        </div>
+        <div class="terminal-body">
+          <pre><span class="prompt"></span>main(){char*s=<span class="str">"main(){char*s=%c%s%c;printf(s,34,s,34);}"</span>;printf(s,34,s,34);}</pre>
+        </div>
+      </div>
+      <div class="terminal-frame">
+        <div class="terminal-bar">
+          <span class="dot" style="background:#5f81a5"></span>
+          <span class="dot" style="background:#d0dfee"></span>
+          <span class="dot" style="background:#e8d0bc"></span>
+          <span class="terminal-title">fizzbuzz.c <span class="dim">/* 67B */</span></span>
+        </div>
+        <div class="terminal-body">
+          <pre><span class="prompt"></span>i;main(){for(;i++&lt;99;)printf(i%15?i%5?i%3?<span class="str">"%d"</span>:<span class="str">"Fizz"</span>:<span class="str">"Buzz"</span>:<span class="str">"FizzBuzz"</span>,i);}</pre>
+        </div>
+      </div>
+      <p class="code-golf-desc">
+        Code golf, obfuscation, and tiny programs&nbsp;&mdash;&nbsp;reducing C to its essentials.
+        There is beauty in constraint.
+      </p>
+    </div>
+  </div>
+</section>
