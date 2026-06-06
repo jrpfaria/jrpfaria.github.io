@@ -91,6 +91,25 @@ pre {
   background: $bg;
 }
 
+.terminal-frame-small {
+  margin-top: 1.25rem;
+  font-size: 0.72rem;
+
+  .terminal-body {
+    padding: 0.4rem 0.75rem;
+  }
+
+  .line {
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .prompt {
+    color: $text-muted;
+    margin-right: 0.3rem;
+  }
+}
+
 .terminal-bar {
   display: flex;
   align-items: center;
