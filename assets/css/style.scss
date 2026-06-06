@@ -4,15 +4,15 @@
 @charset "utf-8";
 
 // ─── Colors ────────────────────────────────────────────────────────
-$bg:         #0a0a0f;
-$bg-alt:     #0f0f18;
-$surface:    #14141e;
-$border:     #1e1e2a;
-$text:       #e0e0e0;
-$text-muted: #787890;
-$accent:     #00d4aa;
-$accent-dim: rgba(0, 212, 170, 0.08);
-$accent-hover: #00e8bb;
+$bg:         #000000;
+$bg-alt:     #0a0a0a;
+$surface:    #111111;
+$border:     #404040;
+$text:       #c1c1c1;
+$text-muted: #888888;
+$accent:     #5f81a5;
+$accent-dim: rgba(95, 129, 165, 0.12);
+$accent-hover: #6e9bbf;
 
 // ─── Reset ─────────────────────────────────────────────────────────
 *, *::before, *::after {

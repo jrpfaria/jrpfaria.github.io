@@ -1,5 +1,4 @@
 (function () {
-  // Mobile nav toggle
   var toggle = document.querySelector(".nav-toggle");
   var links = document.querySelector(".nav-links");
 
@@ -15,34 +14,46 @@
     });
   }
 
-  // Close nav on link click (mobile)
   document.querySelectorAll(".nav-links a").forEach(function (link) {
     link.addEventListener("click", function () {
       links.classList.remove("open");
     });
   });
 
-  // Scroll-triggered nav highlight
   var sections = document.querySelectorAll("section[id]");
   var navLinks = document.querySelectorAll(".nav-links a");
+  var accent = "#5f81a5";
 
   function updateActiveLink() {
-    var scrollY = window.scrollY + 100;
+    var scrollY = window.scrollY;
+    var scrollBottom = scrollY + window.innerHeight;
+    var pageBottom = document.body.scrollHeight;
 
-    sections.forEach(function (section) {
+    // Clear all
+    navLinks.forEach(function (l) { l.style.color = ""; });
+
+    // Bottom of page → highlight last link
+    if (scrollBottom >= pageBottom - 2) {
+      var last = navLinks[navLinks.length - 1];
+      if (last) last.style.color = accent;
+      return;
+    }
+
+    // Normal: iterate in reverse, pick the first section whose top ≤ scrollY + offset
+    var offset = 100;
+    for (var i = sections.length - 1; i >= 0; i--) {
+      var section = sections[i];
       var top = section.offsetTop;
-      var height = section.offsetHeight;
-      var id = section.getAttribute("id");
-
-      if (scrollY >= top && scrollY < top + height) {
+      if (scrollY + offset >= top) {
+        var id = section.getAttribute("id");
         navLinks.forEach(function (link) {
-          link.style.color = "";
           if (link.getAttribute("href") === "#" + id) {
-            link.style.color = "#00d4aa";
+            link.style.color = accent;
           }
         });
+        return;
       }
-    });
+    }
   }
 
   window.addEventListener("scroll", updateActiveLink);
