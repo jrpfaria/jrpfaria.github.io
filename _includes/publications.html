@@ -1,0 +1,18 @@
+<section id="publications" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Publications</h2>
+    <div class="publications-list">
+      {% for pub in site.data.publications %}
+      <div class="pub-card">
+        <div class="pub-meta">
+          <span class="pub-type">{{ pub.type }}</span>
+          <span class="pub-venue">{{ pub.venue }}, {{ pub.year }}</span>
+        </div>
+        <h3 class="pub-title">{{ pub.title }}</h3>
+        <p class="pub-authors">{{ pub.authors }}</p>
+        <p class="pub-desc">{{ pub.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

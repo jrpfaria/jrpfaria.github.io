@@ -1,0 +1,40 @@
+<section id="projects" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-header">
+          <h3 class="project-title">High-Performance CSV Parser</h3>
+          <a href="https://github.com/{{ site.github_username }}/csv-parser" target="_blank" rel="noopener" class="project-link">GitHub</a>
+        </div>
+        <p class="project-desc">
+          Architected 6 parser variants (computed-goto FSM for branchless processors,
+          branch-based, LUT-based) &times; (scalar, SIMD) as a performance case study
+          in control-flow and memory strategies. Uses per-worker arena allocators
+          for zero-allocation hot-path memory management.
+        </p>
+        <div class="project-tags">
+          <span>C</span>
+          <span>SIMD</span>
+          <span>Performance</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-header">
+          <h3 class="project-title">DNN Code Generation Framework</h3>
+        </div>
+        <p class="project-desc">
+          Built a parallel code generator that translates GUI input into HLS-ready C files
+          for FPGA deployment. Designed sample-by-sample inference architecture with local
+          memory reuse, enabling beyond-5G real-time scenarios.
+        </p>
+        <div class="project-tags">
+          <span>C</span>
+          <span>Vitis HLS</span>
+          <span>FPGA</span>
+          <span>HLS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

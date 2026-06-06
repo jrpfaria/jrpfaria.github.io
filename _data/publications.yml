@@ -1,0 +1,22 @@
+- title: "FPGA Acceleration of CNNs at the Edge: A Comparative Study on High-Level Synthesis Frameworks"
+  authors: "J. Faria et al."
+  venue: "IEEE NorCAS"
+  year: 2025
+  month: Oct
+  type: "First-author IEEE conference"
+  description: "Compared Vitis HLS and HDL Coder across latency, resource usage, and development effort for CNN deployment on FPGAs at the edge."
+
+- title: "Using Automatic Code Generation to Streamline the Real-Time FPGA Deployment of DNNs at the Edge"
+  authors: "J. Faria et al."
+  venue: "IEEE ICECS"
+  year: 2025
+  month: Nov
+  type: "First-author IEEE conference"
+  description: "Developed a code generation framework that translates GUI input into HLS-ready C files for DNN deployment on FPGAs, optimizing latency and resource utilization for real-time edge inference."
+
+- title: "Understanding Signal Feature Impact in CNN-Based Modulation Classification with Realistic Datasets"
+  authors: "B. Teixeira, T. Moreira, J. Faria et al."
+  venue: "ICCSA Workshops (Springer LNCS)"
+  year: 2025
+  type: "Co-authored Springer paper"
+  description: "Analyzed the impact of signal features on CNN-based modulation classification using realistic datasets."
